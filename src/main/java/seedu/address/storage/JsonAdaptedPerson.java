@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonSubTypes;
 
 import seedu.address.commons.exceptions.IllegalValueException;
 import seedu.address.model.person.Address;
@@ -38,8 +37,8 @@ class JsonAdaptedPerson {
      */
     @JsonCreator
     public JsonAdaptedPerson(@JsonProperty("name") String name, @JsonProperty("phone") String phone,
-            @JsonProperty("email") String email, @JsonProperty("address") String address,
-            @JsonProperty("remark") String remark, @JsonProperty("tagged") List<JsonAdaptedTag> tagged) {
+                             @JsonProperty("email") String email, @JsonProperty("address") String address,
+                             @JsonProperty("remark") String remark, @JsonProperty("tagged") List<JsonAdaptedTag> tagged) {
         this.name = name;
         this.phone = phone;
         this.email = email;
@@ -105,13 +104,13 @@ class JsonAdaptedPerson {
         if (!Address.isValidAddress(address)) {
             throw new IllegalValueException(Address.MESSAGE_CONSTRAINTS);
         }
+        final Address modelAddress = new Address(address);
 
         if (remark == null) {
             throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT, Remark.class.getSimpleName()));
         }
+        final Remark modelRemark = new Remark(remark);
 
-        final Address modelAddress = new Address(address);
-        final Remark modelRemark = new Remark(""); //TODO: Implement parsing and marshalling in the storage commit.
         final Set<Tag> modelTags = new HashSet<>(personTags);
         return new Person(modelName, modelPhone, modelEmail, modelAddress, modelRemark, modelTags);
     }
