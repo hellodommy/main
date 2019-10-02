@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="seedu-header"><nav class="navbar navbar-lg navbar-light bg-lighter"><div class="container"><a class="navbar-brand" href="https://se-edu.github.io/"><img src="images/SeEduLogo.png" alt="SE-EDU"></a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level1">AB-1</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level2">AB-2</a></li><li class="nav-item"><a class="nav-link active" href="index.html">AB-3</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/addressbook-level4">AB-4</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/collate">Collate</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/se-book">Book</a></li><li class="nav-item"><a class="nav-link" href="https://se-edu.github.io/learningresources">Resources</a></li></ul></div></nav></div><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="index.html">AddressBook-Level3</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link active" href="UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link" href="LearningOutcomes.html">LOs</a></li><li class="nav-item"><a class="nav-link" href="AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/se-edu/addressbook-level3"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>AddressBook Level 3 - User Guide</h1></div><div id="content"><div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>By: <code>Team SE-EDU</code>      Since: <code>Jun 2016</code>      Licence: <code>MIT</code></p>
+<p>By: <code>CS2103T-T12-3</code>      Since: <code>Sep 2019</code>      Licence: <code>MIT</code></p>
 </div>
 </div>
 <div id="toc" class="toc">
@@ -13,16 +13,26 @@
 <li><a href="#quick-start">2. Quick Start</a></li>
 <li><a href="#Features">3. Features</a>
 <ul class="sectlevel2">
-<li><a href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></li>
-<li><a href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></li>
-<li><a href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></li>
-<li><a href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></li>
-<li><a href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></li>
+<li><a href="#adding-an-event-code-event-code">3.1. Adding an event : <code>event</code></a></li>
+<li><a href="#adding-a-player-code-add-code">3.2. Adding a player : <code>add</code></a></li>
+<li><a href="#attendance">3.3. Attendance</a></li>
+<li><a href="#tracking-performance-code-performance-code">3.4. Tracking performance : <code>performance</code></a></li>
+<li><a href="#clearing-the-data-code-clear-code">3.5. Clearing the data : <code>clear</code></a></li>
 <li><a href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></li>
-<li><a href="#clearing-all-entries-code-clear-code">3.7. Clearing all entries : <code>clear</code></a></li>
-<li><a href="#exiting-the-program-code-exit-code">3.8. Exiting the program : <code>exit</code></a></li>
-<li><a href="#saving-the-data">3.9. Saving the data</a></li>
-<li><a href="#encrypting-data-files-code-coming-in-v2-0-code">3.10. Encrypting data files <code>[coming in v2.0]</code></a></li>
+<li><a href="#filtering-members-code-filter-code">3.7. Filtering members : <code>filter</code></a></li>
+<li><a href="#finding-a-certain-player-code-find-code">3.8. Finding a certain player : <code>find</code></a></li>
+<li><a href="#selecting-a-player-code-select-code">3.9. Selecting a player : <code>select</code></a></li>
+<li><a href="#viewing-help-code-help-code">3.10. Viewing help : <code>help</code></a></li>
+<li><a href="#viewing-history">3.11. Viewing history :</a></li>
+<li><a href="#undoing-a-command-code-undo-code">3.12. Undoing a command : <code>undo</code></a></li>
+<li><a href="#redoing-a-command-code-redo-code">3.13. Redoing a command : <code>redo</code></a></li>
+<li><a href="#importing-data-code-import-code">3.14. Importing data : <code>import</code></a></li>
+<li><a href="#exporting-data-code-export-code">3.15. Exporting data : <code>export</code></a></li>
+<li><a href="#sorting-list-of-players-by-names-or-performance-code-sort-code">3.16. Sorting list of players by names or performance : <code>sort</code></a></li>
+<li><a href="#tagging-a-player-code-tag-code">3.17. Tagging a player : <code>tag</code></a></li>
+<li><a href="#team-roster-coming-in-v2-0">3.18. Team roster [coming in v2.0]</a></li>
+<li><a href="#performance-tracker-coming-in-v2-0">3.19. Performance tracker [coming in v2.0]</a></li>
+<li><a href="#saving-the-data">3.20. Saving the data</a></li>
 </ul>
 </li>
 <li><a href="#faq">4. FAQ</a></li>
@@ -34,7 +44,12 @@
 <h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>AddressBook Level 3 (AB3) is for those who <strong>prefer to use a desktop app for managing contacts</strong>. More importantly, AB3 is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB3 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
+<p>Athletick is a team management app for team captains or coaches. The app supports storing of team members'
+<strong>personal details, attendance tracking and performance recording</strong>.
+More importantly, Athletick is <strong>optimized for those who prefer to work with a Command Line Interface</strong> (CLI) while still
+having the benefits of a Graphical User Interface (GUI). If you can type fast, Athletick can get your team
+management
+tasks done faster than traditional GUI apps. Interested? Jump to the <a href="#quick-start">Section 2, &#8220;Quick Start&#8221;</a> to get started. Enjoy!</p>
 </div>
 </div>
 </div>
@@ -47,10 +62,10 @@
 <p>Ensure you have Java <code>11</code> or above installed in your Computer.</p>
 </li>
 <li>
-<p>Download the latest <code>addressbook.jar</code> <a href="https://github.com/se-edu/addressbook-level3/releases">here</a>.</p>
+<p>Download the latest <code>athletick.jar</code> <a href="https://github.com/se-edu/addressbook-level3/releases">here</a>.</p>
 </li>
 <li>
-<p>Copy the file to the folder you want to use as the home folder for your Address Book.</p>
+<p>Copy the file to the folder you want to use as the home folder for your Athletick.</p>
 </li>
 <li>
 <p>Double-click the file to start the app. The GUI should appear in a few seconds.</p>
@@ -63,25 +78,6 @@
 <li>
 <p>Type the command in the command box and press <kbd>Enter</kbd> to execute it.<br>
 e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> will open the help window.</p>
-</li>
-<li>
-<p>Some example commands you can try:</p>
-<div class="ulist">
-<ul>
-<li>
-<p><strong><code>list</code></strong> : lists all contacts</p>
-</li>
-<li>
-<p><strong><code>add</code></strong><code>n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code> : adds a contact named <code>John Doe</code> to the Address Book.</p>
-</li>
-<li>
-<p><strong><code>delete</code></strong><code>3</code> : deletes the 3rd contact shown in the current list</p>
-</li>
-<li>
-<p><strong><code>exit</code></strong> : exits the app</p>
-</li>
-</ul>
-</div>
 </li>
 <li>
 <p>Refer to <a href="#Features">Section 3, &#8220;Features&#8221;</a> for details of each command.</p>
@@ -117,145 +113,128 @@ e.g. typing <strong><code>help</code></strong> and pressing <kbd>Enter</kbd> wil
 </div>
 </div>
 <div class="sect2">
-<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.1. Viewing help : <code>help</code></a></h3>
+<h3 id="adding-an-event-code-event-code"><a class="link" href="#adding-an-event-code-event-code">3.1. Adding an event : <code>event</code></a></h3>
 <div class="paragraph">
-<p>Format: <code>help</code></p>
+<p>Adds an event to Athletick. Used for keying player performance.</p>
+</div>
+<div class="paragraph">
+<p>Format : <code>event NAME_OF_EVENT</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="adding-a-person-code-add-code"><a class="link" href="#adding-a-person-code-add-code">3.2. Adding a person: <code>add</code></a></h3>
+<h3 id="adding-a-player-code-add-code"><a class="link" href="#adding-a-player-code-add-code">3.2. Adding a player : <code>add</code></a></h3>
 <div class="paragraph">
-<p>Adds a person to the address book<br>
-Format: <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code></p>
+<p>Adds a person to Athletick.<br></p>
 </div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-tip" title="Tip"></i>
-</td>
-<td class="content">
-A person can have any number of tags (including 0)
-</td>
-</tr>
-</table>
+<div class="paragraph">
+<p>Format : <code>add n/NAME p/PHONE_NUMBER e/EMAIL g/GENDER</code></p>
 </div>
 <div class="paragraph">
 <p>Examples:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01</code></p>
-</li>
-<li>
-<p><code>add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal</code></p>
-</li>
-</ul>
+<div class="paragraph">
+<p><code>add n/James Ho p/91234567 e/jamesho@gmail.com g/M</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="listing-all-persons-code-list-code"><a class="link" href="#listing-all-persons-code-list-code">3.3. Listing all persons : <code>list</code></a></h3>
+<h3 id="attendance"><a class="link" href="#attendance">3.3. Attendance</a></h3>
+<div class="sect3">
+<h4 id="taking-attendance-code-attendance-code"><a class="link" href="#taking-attendance-code-attendance-code">3.3.1. Taking attendance : <code>attendance</code></a></h4>
 <div class="paragraph">
-<p>Shows a list of all persons in the address book.<br>
-Format: <code>list</code></p>
+<p>Mark attendance of players<br></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="editing-a-person-code-edit-code"><a class="link" href="#editing-a-person-code-edit-code">3.4. Editing a person : <code>edit</code></a></h3>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>By members present</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Format by name : <code>attendance -tn n/NAME [n/NAME] [n/NAME] …</code></p>
 <div class="paragraph">
-<p>Edits an existing person in the address book.<br>
-Format: <code>edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code></p>
+<p>Examples :<br>
+<code>attendance -tn n/Erwin n/Jun Hup n/Shawn n/Dom n/Jeun Hoe</code></p>
 </div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>Edits the person at the specified <code>INDEX</code>. The index refers to the index number shown in the displayed person list. The index <strong>must be a positive integer</strong> 1, 2, 3, &#8230;&#8203;</p>
 </li>
 <li>
-<p>At least one of the optional fields must be provided.</p>
-</li>
-<li>
-<p>Existing values will be updated to the input values.</p>
-</li>
-<li>
-<p>When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative.</p>
-</li>
-<li>
-<p>You can remove all the person&#8217;s tags by typing <code>t/</code> without specifying any tags after it.</p>
-</li>
-</ul>
+<p>Format by index : <code>attendance -ti INDEX [INDEX] [INDEX ] …</code></p>
+<div class="paragraph">
+<p>Examples :</p>
 </div>
+</li>
+</ol>
 </div>
-</div>
+</li>
+<li>
+<p>By members absent</p>
+<div class="olist lowerroman">
+<ol class="lowerroman" type="i">
+<li>
+<p>Format by name : <code>attendance -tn -a n/NAME [n/NAME] [n/NAME] …</code></p>
 <div class="paragraph">
 <p>Examples:</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>edit 1 p/91234567 e/johndoe@example.com</code><br>
-Edits the phone number and email address of the 1st person to be <code>91234567</code> and <code>johndoe@example.com</code> respectively.</p>
 </li>
 <li>
-<p><code>edit 2 n/Betsy Crower t/</code><br>
-Edits the name of the 2nd person to be <code>Betsy Crower</code> and clears all existing tags.</p>
+<p>Format by Index : <code>attendance -ti -a INDEX [INDEX] [INDEX ] &#8230;&#8203;</code></p>
+<div class="paragraph">
+<p>Examples :</p>
+</div>
 </li>
-</ul>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-attendance-code-attendance-v-code"><a class="link" href="#viewing-attendance-code-attendance-v-code">3.3.2. Viewing attendance : <code>attendance -v</code></a></h4>
+<div class="paragraph">
+<p>Viewing overall attendance</p>
+</div>
+<div class="paragraph">
+<p>Format by percentage : <code>attendance -v -p</code></p>
+</div>
+<div class="paragraph">
+<p>Format by date : <code>attendance -v -t [dd/mm/yy]</code></p>
+</div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="locating-persons-by-name-code-find-code"><a class="link" href="#locating-persons-by-name-code-find-code">3.5. Locating persons by name: <code>find</code></a></h3>
+<h3 id="tracking-performance-code-performance-code"><a class="link" href="#tracking-performance-code-performance-code">3.4. Tracking performance : <code>performance</code></a></h3>
 <div class="paragraph">
-<p>Finds persons whose names contain any of the given keywords.<br>
-Format: <code>find KEYWORD [MORE_KEYWORDS]</code></p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="ulist">
-<ul>
-<li>
-<p>The search is case insensitive. e.g <code>hans</code> will match <code>Hans</code></p>
-</li>
-<li>
-<p>The order of the keywords does not matter. e.g. <code>Hans Bo</code> will match <code>Bo Hans</code></p>
-</li>
-<li>
-<p>Only the name is searched.</p>
-</li>
-<li>
-<p>Only full words will be matched e.g. <code>Han</code> will not match <code>Hans</code></p>
-</li>
-<li>
-<p>Persons matching at least one keyword will be returned (i.e. <code>OR</code> search). e.g. <code>Hans Bo</code> will return <code>Hans Gruber</code>, <code>Bo Yang</code></p>
-</li>
-</ul>
-</div>
-</div>
+<p>Keying in performance of player in event.<br>
+Format: <code>performance INDEX EVENT TIMING</code></p>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Examples :</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>find John</code><br>
-Returns <code>john</code> and <code>John Doe</code></p>
-</li>
-<li>
-<p><code>find Betsy Tim John</code><br>
-Returns any person having names <code>Betsy</code>, <code>Tim</code>, or <code>John</code></p>
-</li>
-</ul>
+</div>
+<div class="sect2">
+<h3 id="clearing-the-data-code-clear-code"><a class="link" href="#clearing-the-data-code-clear-code">3.5. Clearing the data : <code>clear</code></a></h3>
+<div class="paragraph">
+<p>Clears the entire data in the program.<br>
+Format: <code>clear</code></p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="deleting-a-person-code-delete-code"><a class="link" href="#deleting-a-person-code-delete-code">3.6. Deleting a person : <code>delete</code></a></h3>
 <div class="paragraph">
-<p>Deletes the specified person from the address book.<br>
-Format: <code>delete INDEX</code></p>
+<p>Deletes player from training list, either by index or by name.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Format by name : <code>delete n/NAME</code></p>
+<div class="paragraph">
+<p>Example :<br>
+<code>delete n/james ho</code></p>
+</div>
+</li>
+<li>
+<p>Format by index : <code>delete INDEX</code></p>
+</li>
+</ol>
 </div>
 <div class="sidebarblock">
 <div class="content">
@@ -275,48 +254,128 @@ Format: <code>delete INDEX</code></p>
 </div>
 </div>
 <div class="paragraph">
-<p>Examples:</p>
+<p>Example :<br>
+<code>delete 2</code></p>
 </div>
-<div class="ulist">
-<ul>
+</div>
+<div class="sect2">
+<h3 id="filtering-members-code-filter-code"><a class="link" href="#filtering-members-code-filter-code">3.7. Filtering members : <code>filter</code></a></h3>
+<div class="paragraph">
+<p>Filters the members based on the gender or position.</p>
+</div>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
-<p><code>list</code><br>
-<code>delete 2</code><br>
-Deletes the 2nd person in the address book.</p>
+<p>Format by gender: <code>filter GENDER</code></p>
+<div class="paragraph">
+<p>Examples :<br>
+<code>filter male</code><br>
+<code>filter female</code></p>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="finding-a-certain-player-code-find-code"><a class="link" href="#finding-a-certain-player-code-find-code">3.8. Finding a certain player : <code>find</code></a></h3>
+<div class="paragraph">
+<p>Finds a player by name.</p>
+</div>
+<div class="paragraph">
+<p>Format : <code>find n/NAME</code></p>
+</div>
+<div class="paragraph">
+<p>Example :
+<code>find n/James Ho</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="selecting-a-player-code-select-code"><a class="link" href="#selecting-a-player-code-select-code">3.9. Selecting a player : <code>select</code></a></h3>
+<div class="paragraph">
+<p>Selects a member which will display their details.</p>
+</div>
+<div class="paragraph">
+<p>Format : <code>select INDEX</code></p>
+</div>
+<div class="paragraph">
+<p>Example:</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-help-code-help-code"><a class="link" href="#viewing-help-code-help-code">3.10. Viewing help : <code>help</code></a></h3>
+<div class="paragraph">
+<p>Format : <code>help</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="viewing-history"><a class="link" href="#viewing-history">3.11. Viewing history :</a></h3>
+<div class="paragraph">
+<p>Displays the history of the command previously entered.</p>
+</div>
+<div class="paragraph">
+<p>Format : <code>history</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="undoing-a-command-code-undo-code"><a class="link" href="#undoing-a-command-code-undo-code">3.12. Undoing a command : <code>undo</code></a></h3>
+<div class="paragraph">
+<p>Format : <code>undo</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="redoing-a-command-code-redo-code"><a class="link" href="#redoing-a-command-code-redo-code">3.13. Redoing a command : <code>redo</code></a></h3>
+<div class="paragraph">
+<p>Format : <code>redo</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="importing-data-code-import-code"><a class="link" href="#importing-data-code-import-code">3.14. Importing data : <code>import</code></a></h3>
+<div class="paragraph">
+<p>Format: <code>import FILEPATH</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exporting-data-code-export-code"><a class="link" href="#exporting-data-code-export-code">3.15. Exporting data : <code>export</code></a></h3>
+<div class="paragraph">
+<p>Format: <code>export FILEPATH</code></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="sorting-list-of-players-by-names-or-performance-code-sort-code"><a class="link" href="#sorting-list-of-players-by-names-or-performance-code-sort-code">3.16. Sorting list of players by names or performance : <code>sort</code></a></h3>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Format by name: <code>sort n</code></p>
 </li>
 <li>
-<p><code>find Betsy</code><br>
-<code>delete 1</code><br>
-Deletes the 1st person in the results of the <code>find</code> command.</p>
+<p>Format by performance: <code>sort p</code></p>
 </li>
-</ul>
+</ol>
 </div>
 </div>
 <div class="sect2">
-<h3 id="clearing-all-entries-code-clear-code"><a class="link" href="#clearing-all-entries-code-clear-code">3.7. Clearing all entries : <code>clear</code></a></h3>
+<h3 id="tagging-a-player-code-tag-code"><a class="link" href="#tagging-a-player-code-tag-code">3.17. Tagging a player : <code>tag</code></a></h3>
 <div class="paragraph">
-<p>Clears all entries from the address book.<br>
-Format: <code>clear</code></p>
+<p>Format: <code>tag n/NAME t/NAME_OF_TAG</code></p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="exiting-the-program-code-exit-code"><a class="link" href="#exiting-the-program-code-exit-code">3.8. Exiting the program : <code>exit</code></a></h3>
 <div class="paragraph">
-<p>Exits the program.<br>
-Format: <code>exit</code></p>
+<p>Example:<br>
+<code>tag n/James Ho t/captain</code></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.9. Saving the data</a></h3>
+<h3 id="team-roster-coming-in-v2-0"><a class="link" href="#team-roster-coming-in-v2-0">3.18. Team roster [coming in v2.0]</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="performance-tracker-coming-in-v2-0"><a class="link" href="#performance-tracker-coming-in-v2-0">3.19. Performance tracker [coming in v2.0]</a></h3>
+
+</div>
+<div class="sect2">
+<h3 id="saving-the-data"><a class="link" href="#saving-the-data">3.20. Saving the data</a></h3>
 <div class="paragraph">
 <p>Address book data are saved in the hard disk automatically after any command that changes the data.<br>
 There is no need to save manually.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="encrypting-data-files-code-coming-in-v2-0-code"><a class="link" href="#encrypting-data-files-code-coming-in-v2-0-code">3.10. Encrypting data files <code>[coming in v2.0]</code></a></h3>
-<div class="paragraph">
-<p><em>{explain how the user can enable/disable data encryption}</em></p>
 </div>
 </div>
 </div>
@@ -336,31 +395,133 @@ There is no need to save manually.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Add</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague</code></p>
+<p><strong>Add event</strong> <code>event NAME_OF_EVENT</code></p>
+</li>
+<li>
+<p><strong>Add player</strong> <code>add n/NAME p/PHONE_NUMBER e/EMAIL g/GENDER</code><br>
+e.g. <code>add n/James Ho p/91234567 e/jamesho@gmail.com g/M</code></p>
+</li>
+<li>
+<p>Take attendance by <em>members present</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>By Name</strong> <code>attendance -tn n/NAME [n/NAME] [n/NAME] &#8230;&#8203;</code><br>
+e.g. <code>attendance -tn n/Erwin n/Jun Hup n/Shawn n/Dom n/Jeun Hoe</code></p>
+</li>
+<li>
+<p><strong>By index</strong> <code>attendance -ti INDEX [INDEX] [INDEX ] &#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Take attendance by <em>members absent</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>By name</strong> <code>attendance -tn -a n/NAME [n/NAME] [n/NAME] &#8230;&#8203;</code></p>
+</li>
+<li>
+<p><strong>By index</strong> <code>attendance -ti -a INDEX [INDEX] [INDEX ] &#8230;&#8203;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>View Attendance</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>By percentage</strong> <code>attendance -v -p</code></p>
+</li>
+<li>
+<p><strong>By date</strong> <code>attendance -v -t [dd/mm/yy]</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Add performance</strong> <code>performance -a INDEX EVENT TIMING</code></p>
+</li>
+<li>
+<p><strong>View performance</strong> <code>performance -v e/EVENT</code></p>
 </li>
 <li>
 <p><strong>Clear</strong> : <code>clear</code></p>
 </li>
 <li>
-<p><strong>Delete</strong> : <code>delete INDEX</code><br>
-e.g. <code>delete 3</code></p>
+<p>Delete</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>By index</strong> <code>delete INDEX</code><br>
+e.g. <code>delete 2</code></p>
 </li>
 <li>
-<p><strong>Edit</strong> : <code>edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]&#8230;&#8203;</code><br>
-e.g. <code>edit 2 n/James Lee e/jameslee@example.com</code></p>
+<p><strong>By name</strong> <code>delete n/NAME</code><br>
+e.g. <code>delete n/james ho</code></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><strong>Find</strong> : <code>find KEYWORD [MORE_KEYWORDS]</code><br>
-e.g. <code>find James Jake</code></p>
+<p>Filter</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>By gender</strong> <code>filter GENDER</code><br>
+e.g. <code>filter male</code></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><strong>List</strong> : <code>list</code></p>
+<p><strong>Find</strong> <code>find  n/NAME</code><br>
+e.g. <code>find n/James Ho</code></p>
 </li>
 <li>
-<p><strong>Help</strong> : <code>help</code></p>
+<p><strong>Select</strong> <code>select INDEX</code></p>
+</li>
+<li>
+<p><strong>Help</strong> <code>help</code></p>
+</li>
+<li>
+<p><strong>History</strong> <code>history</code></p>
+</li>
+<li>
+<p><strong>Undo</strong> <code>undo</code></p>
+</li>
+<li>
+<p><strong>Redo</strong> <code>redo</code></p>
+</li>
+<li>
+<p><strong>Import</strong> <code>import FILEPATH</code></p>
+</li>
+<li>
+<p><strong>Export</strong> <code>export FILEPATH</code></p>
+</li>
+<li>
+<p><strong>List</strong> <code>list</code></p>
+</li>
+<li>
+<p>Sort</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>By name</strong> <code>sort n</code></p>
+</li>
+<li>
+<p><strong>By performance</strong> <code>sort p</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Tags</strong> <code>tag n/NAME t/NAME_OF_TAG</code><br>
+e.g. <code>tag n/James Ho t/captain</code></p>
 </li>
 </ul>
 </div>
 </div>
-</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-02 09:57:17 UTC</div></div></div></body></html>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-10-02 13:57:34 UTC</div></div></div></body></html>
