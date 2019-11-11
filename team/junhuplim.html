@@ -1,0 +1,563 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Lim Jun Hup - Project Portfolio for Athletick</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">Athletick</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S1-CS2103T-T12-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Lim Jun Hup - Project Portfolio for Athletick</h1></div><div id="content"><div class="sect1">
+<h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The purpose of this portfolio showcases my contribution to the Athletick project.</p>
+</div>
+<div class="sect2">
+<h3 id="about-the-team"><a class="link" href="#about-the-team">1.1. About the team</a></h3>
+<div class="paragraph">
+<p>Our team comprises of five second-year computer science undergraduates from
+the National University of Singapore (NUS).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="about-the-project"><a class="link" href="#about-the-project">1.2. About the project</a></h3>
+<div class="paragraph">
+<p>This project is a 6 weeks long project for our software engineering module.
+We were tasked to either enhance or morph a command line interface
+Address Book application and one of the main constraints for this project is that
+it has to remain as a command line interface application.</p>
+</div>
+<div class="paragraph">
+<p>What we decided to do was to morph the existing address book application to a team
+management application called Athletick. Athletick is designed for captains and
+coaches of timing-based performance sports to help take and keep track of attendance
+and performance of their teams. Other main features of Athletick include viewing of the training calendar
+and performance graph.</p>
+</div>
+<div class="paragraph">
+<p>My role was to design and implement the code for the <code>undo</code> and <code>redo</code> features.
+The following sections illustrate these enhancements in more detail, as
+well as the relevant documentation I have added to the user and developer guides
+in relation to these enhancements.</p>
+</div>
+<div class="paragraph">
+<p>Note the following symbols and formatting used in this document:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This symbol indicates important information
+</td>
+</tr>
+</table>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+<code>command</code>
+</td>
+<td class="hdlist2">
+<p>A grey highlight (called a mark-up) indicates that this is a command that can be typed into the command line and executed by the application.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code><span class="green">component</span></code>
+</td>
+<td class="hdlist2">
+<p>Green text with grey highlight indicates a component, class, object or method in the architecture of the application.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">2. Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section shows a summary of my coding, documentation, and other helpful contributions to the team project.</p>
+</div>
+<div class="paragraph">
+<p><strong>Enhancement added</strong>: I added the ability to undo/redo previous commands.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>undo</code> command allows the user to undo a previous command. The user may
+reverse this <code>undo</code> command with the <code>redo</code> command.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Justification</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In the event that users have made a mistake or changed their minds about executing
+a command, the <code>undo</code> command enables them to revert to a version immediately before the mistaken command
+was executed. If they change their minds again and decide to execute the command after all,
+then the <code>redo</code> command enables them to do so easily.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Highlights</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This enhancement works with existing as well as future commands.</p>
+</li>
+<li>
+<p>An in-depth analysis of design
+alternatives was necessary to weigh the different alternatives and decide on the implementation for this enhancement.</p>
+</li>
+<li>
+<p>The implementation was challenging as it required a full understanding of
+the major components of the application and the existing features implementations.
+Also, the enhancement had to be implemented in a way that the future enhancements for any future
+features are able to be easily integrated into the current implementation.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Code contributed</strong>: The links provided show my code contribution for the project.
+(<a href="https://nus-cs2103-ay1920s1.github.io/tp-dashboard/#search=junhup&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2019-09-06&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByAuthors&amp;breakdown=false">Reposense</a>, <a href="https://github.com/junhuplim/main">Github Repository</a>)</p>
+</div>
+<div class="paragraph">
+<p><strong>Other contributions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Managed version release v1.3.4 of Athletick to prepare for final
+production release on GitHub
+(<a href="https://github.com/AY1920S1-CS2103T-T12-3/main/releases/tag/v.1.3.4">v1.3.4</a>)</p>
+</li>
+<li>
+<p>Introduced Trello for tasks and deadlines management</p>
+</li>
+<li>
+<p>Served as the team&#8217;s Backend Engineer and assisted in the logic of the program whenever needed</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Existing features enhancement</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Implemented Training and Attendance classes (Pull request <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/63">#63</a>)</p>
+</li>
+<li>
+<p>Added the Gender attribute (Pull request <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/130">#130</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added documentation for <code>undo</code> and <code>redo</code> for both User Guide and Developer Guide
+(Pull requests <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/188">#188</a>,
+<a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/219">#219</a>)</p>
+</li>
+<li>
+<p>Standardised product screenshots for <code>clear</code> and <code>help</code> in User Guide to make it more reader-friendly
+(Pull request <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/223">#223</a>)</p>
+</li>
+<li>
+<p>Fixed icons bugs and improved on alignment in User Guide and Developer Guide
+(Pull requests <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/242">#242</a>,
+<a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/243">#243</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Reviewed PRs with non-trivial review comments (Pull requests
+<a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/210">#210</a>,
+<a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/225">#225</a>)</p>
+</li>
+<li>
+<p>Commented and provided suggestions on other team&#8217;s PR
+(<a href="https://github.com/nus-cs2103-AY1920S1/addressbook-level3/pull/29">Review</a>)</p>
+</li>
+<li>
+<p>Reported bugs and suggestions for other teams (Bug reports and suggestions: <a href="https://github.com/junhuplim/ped/issues/5">1</a>, <a href="https://github.com/junhuplim/ped/issues/8">2</a>,
+<a href="https://github.com/junhuplim/ped/issues/9">3</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">3. Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section showcases my contribution to the User Guide. They showcase my ability to write
+documentation targeting end-users.</p>
+</div>
+<div class="paragraph">
+<p>{Start of extract from User Guide}</p>
+</div>
+<div class="sect3">
+<h4 id="undoing-a-previous-command-code-undo-code"><a class="link" href="#undoing-a-previous-command-code-undo-code">3.1. Undoing a previous command : <code>undo</code></a></h4>
+<div class="paragraph">
+<p>This command restores Athletick to the state before the previous command was executed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Take note that the <code>undo</code> feature only applies to undoable commands.
+Undoable commands include: <code>add</code>, <code>delete</code>, <code>edit</code>, <code>clear</code>, <code>training</code>, <code>event</code> and <code>performance</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>undo</code> command will not be able to undo non-undoable commands.
+Let’s say you have executed a <code>list</code> command to list out all the athletes information in Athletick.
+If you were to execute the <code>undo</code> command now, the <code>undo</code> command will fail because <code>list</code> is not an undoable command,
+and that no undoable commands were executed before this.</p>
+</div>
+<div class="paragraph">
+<p>The <code>undo</code> command will reverse the latest command that can be undone.
+Let’s say you have executed the <code>delete</code> command, followed by the <code>list</code> command.
+Since <code>list</code> command is not an undoable command, if you were to execute <code>undo</code>
+command now, you will thus reverse the <code>delete</code> command.</p>
+</div>
+<div class="paragraph">
+<p>The <code>undo</code> command reverses previous commands in reverse chronological order.
+Let’s say you have executed the <code>edit</code> command, followed by the <code>delete</code> command. If you were
+to execute <code>undo</code> command now, you will reverse the <code>delete</code> command. Executing <code>undo</code> again
+will then reverse the <code>edit</code> command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let’s say you have accidentally deleted an athlete’s contact (Mohamad Ali) from your list.
+Instead of having to re-enter Mohamad Ali’s contact information all over again,
+you can easily restore all of Mohamad Ali’s details by executing the command <code>undo</code> to
+undo the <code>delete</code> command that you have just entered.</p>
+</div>
+<div class="paragraph">
+<p><strong>What you should do</strong></p>
+</div>
+<div class="paragraph">
+<p>With Mohamad Ali&#8217;s contact information deleted, the current list has 7 people. Type <code>undo</code> into the command box, and
+press Enter to execute it.</p>
+</div>
+<div class="paragraph">
+<p>Format : <code>undo</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Undo0.png" alt="Undo0" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>What you should see</strong></p>
+</div>
+<div class="paragraph">
+<p>The result box will display a success message and you can check that
+Mohamad Ali’s contact information is visible in the list again!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/AfterUndo0.png" alt="AfterUndo0" width="400">
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="redoing-an-code-undo-code-command-code-redo-code"><a class="link" href="#redoing-an-code-undo-code-command-code-redo-code">3.2. Redoing an <code>undo</code> command : <code>redo</code></a></h4>
+<div class="paragraph">
+<p>This command reverses the most recent <code>undo</code> command.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The <code>redo</code> command can only be executed immediately after an <code>undo</code> command.
+Let’s say that you have executed the <code>undo</code> command to undo a previous command that you have previously executed.
+You then execute the <code>list</code> command to view your list.
+Executing the <code>redo</code> command now will fail because your previous command was not an <code>undo</code> command.</p>
+</div>
+<div class="paragraph">
+<p>The <code>redo</code> command reverses previous <code>undo</code> commands in reverse chronological order.
+Let’s say that you have executed the <code>clear</code> command, followed by the <code>add</code> command.
+Executing the <code>undo</code> command now will reverse the <code>add</code> command.
+Executing the <code>undo</code> command again will reverse the <code>clear</code> command as well.
+Following this, executing the <code>redo</code> command will reverse the most recent <code>undo</code> command and re-execute the <code>clear</code>
+command.
+Executing the <code>redo</code> command again will reverse the second most recent <code>undo</code> command and re-execute the <code>add</code> command.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let’s say you have executed the <code>delete</code> command to delete Mohamad Ali from your list.
+You may undo this action and restore Mohamad Ali’s information by executing the <code>undo</code> command.</p>
+</div>
+<div class="paragraph">
+<p>Then, if you decide that you want the contact to remain deleted after all,
+you may very quickly do so by executing the <code>redo</code> command to reverse the <code>undo</code> command that you had just executed.</p>
+</div>
+<div class="paragraph">
+<p><strong>What you should do</strong></p>
+</div>
+<div class="paragraph">
+<p>With Mohamad Ali&#8217;s contact information, the current list has 8 people. Type <code>redo</code> into the command box, and press
+Enter to execute it.</p>
+</div>
+<div class="paragraph">
+<p>Format : <code>redo</code></p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Redo0.png" alt="Redo0" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>What you should see</strong></p>
+</div>
+<div class="paragraph">
+<p>The result box will display a success message.
+Furthermore, the list now only has 7 people and Mohamad Ali is once deleted from the list!</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/AfterRedo0.png" alt="AfterRedo0" width="400">
+</div>
+</div>
+<div class="paragraph">
+<p>{End of extract from User Guide}</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">4. Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section showcases my contribution to the Developer Guide. They showcase my ability to write technical
+documentation and the technical depth of my contributions to the project.</p>
+</div>
+<div class="paragraph">
+<p>{Start of extract from Developer Guide}</p>
+</div>
+<div class="sect2">
+<h3 id="undo-redo-feature"><a class="link" href="#undo-redo-feature">4.1. Undo / Redo feature</a></h3>
+<div class="paragraph">
+<p>The <code>undo</code> command enables users to undo their previous commands while the <code>redo</code> command enables users to redo their
+undone commands.</p>
+</div>
+<div class="sect3">
+<h4 id="undo-implementation"><a class="link" href="#undo-implementation">4.1.1. Undo Implementation</a></h4>
+<div class="paragraph">
+<p>The <code>undo</code> command is facilitated by the <code><span class="green">HistoryManager</span></code>. <code><span class="green">HistoryManager</span></code> holds the
+states of <code><span class="green">Athletick</span></code>, <code><span class="green">Attendance</span></code> and <code><span class="green">Performance</span></code>, which are kept in
+their respective stacks governed by <code><span class="green">HistoryManager</span></code>. Furthermore, <code><span class="green">HistoryManager</span></code> also
+holds the <code><span class="green">Command</span></code> stack that keeps track of the commands executed by the user.</p>
+</div>
+<div class="paragraph">
+<p>Each time after the user executes a command, the command will be pushed to the
+<code><span class="green">Command</span></code> stack. Also, following the execution of the command,
+changes to either <code><span class="green">Athletick</span></code>,<code><span class="green">Attendance</span></code> or <code><span class="green">Performance</span></code>
+will result in the new state being pushed into their respective stacks.</p>
+</div>
+<div class="paragraph">
+<p>Given below is an example usage scenario on how the undo mechanism behaves at each step.</p>
+</div>
+<div class="paragraph">
+<p>Step 1. The user launches the application for the first time. The <code><span class="green">HistoryManager</span></code> will be
+initialised with the initial <code><span class="green">Athletick</span></code>, <code><span class="green">Attendance</span></code> and
+<code><span class="green">Performance</span></code> state pushed to the respective stacks.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/initialStack.png" alt="initialStack" width="350">
+</div>
+<div class="title">Figure 1. Initial stacks of states</div>
+</div>
+<div class="paragraph">
+<p>Step 2. The user executes the <code>delete -p 3</code> command to delete the 3rd person in the <code><span class="green">Athletick</span></code> list. The
+delete command will be pushed into the <code><span class="green">Command</span></code> stack. After that,
+since the <code>delete -p 3</code> command only alters the <code><span class="green">Athletick</span></code> state, the new <code><span class="green">Athletick</span></code>
+state will then be pushed to the <code><span class="green">Athletick</span></code> stack while the <code><span class="green">Attendance</span></code> and
+<code><span class="green">Performance</span></code> stacks are left untouched as their states remain the same.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/afterUndoStack.png" alt="afterUndoStack" width="350">
+</div>
+<div class="title">Figure 2. Stacks of states after <code>delete -p 3</code> command</div>
+</div>
+<div class="paragraph">
+<p>Step 3. The user now decides that deleting the 3rd person in the list was a mistake, and decides to undo the action
+by executing the <code>undo</code> command. The <code>undo</code> command then executes the <code>undo</code> method in the
+<code><span class="green">ModelManager</span></code>. This pops the latest command from the <code><span class="green">Command</span></code>
+stack and the latest <code><span class="green">Athletick</span></code> state from the <code><span class="green">Athletick</span></code> stack.
+It then peeks at the <code><span class="green">Athletick</span></code> stack to retrieve the <code><span class="green">Athletick</span></code> state
+before <code>delete -p 3</code> command was executed.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/initialStack.png" alt="initialStack" width="350">
+</div>
+<div class="title">Figure 3. Stacks of states after <code>undo</code> command</div>
+</div>
+<div class="paragraph">
+<p>Step 4. After retrieving the <code><span class="green">Athletick</span></code> state before <code>delete -p 3</code> command
+was executed, we then reset the <code><span class="green">Athletick</span></code> state to this retrieved
+<code><span class="green">Athletick</span></code> state. As such, the previous command will then be undone.</p>
+</div>
+<div class="paragraph">
+<p>The following sequence diagram shows how the undo operation works:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/undoSQ.png" alt="undoSQ" width="400">
+</div>
+<div class="title">Figure 4. Sequence diagram for undo implementation</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="redo-implementation"><a class="link" href="#redo-implementation">4.1.2. Redo Implementation</a></h4>
+<div class="paragraph">
+<p>The <code>redo</code> command is similarly facilitated by the <code><span class="green">HistoryManager</span></code>. <code><span class="green">HistoryManager</span></code>
+also holds the undone states of <code><span class="green">Athletick</span></code>, <code><span class="green">Attendance</span></code> and <code><span class="green">Performance</span></code>,
+which are kept in their respective undone stacks governed by <code><span class="green">HistoryManager</span></code>. Furthermore,
+<code><span class="green">HistoryManager</span></code> also holds the undone <code><span class="green">Command</span></code> stack that keeps track of the commands
+undone by the user.</p>
+</div>
+<div class="paragraph">
+<p>Each time an <code>undo</code> command is executed succesfully, the undone <code><span class="green">Command</span></code> will be pushed
+to the undone <code><span class="green">Command</span></code> stack and the respective undone states of <code><span class="green">Athletick</span></code>, <code><span class="green">Attendance</span></code>
+or <code><span class="green">Performance</span></code>, if affected, will be pushed to their respective undone states.</p>
+</div>
+<div class="paragraph">
+<p>Following that, how the <code>redo</code> command works is very similar to how the <code>undo</code> command works.
+As such, you can also refer to the diagrams in the
+<a href="https://github.com/AY1920S1-CS2103T-T12-3/main/blob/master/docs/DeveloperGuide.adoc#undo-redo-feature">Undo
+Implementation.</a></p>
+</div>
+<div class="paragraph">
+<p>The activity diagram for <code>redo</code> command is as follows:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/redoactivity.png" alt="redoactivity" width="400">
+</div>
+<div class="title">Figure 5. Activity diagram for <code>redo</code> command</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">4.1.3. Design Considerations</a></h4>
+<div class="paragraph">
+<p>This section describes the pros and cons of the current and other alternative implementations of the undo and redo features.</p>
+</div>
+<div class="sect4">
+<h5 id="aspect-how-undo-redo-executes"><a class="link" href="#aspect-how-undo-redo-executes">Aspect: How undo &amp; redo executes</a></h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 45.4545%;">
+<col style="width: 45.4546%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternative 1 (Current Choice): Keep states of <code><span class="green">Athletick</span></code>, <code><span class="green">Attendance</span></code> and
+<code><span class="green">Performance</span></code>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Alternative 2: Individual command knows how to undo/redo by itself</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pros</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>Easy to implement, and easy for developers to understand.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>Will use less memory (e.g. for <code>delete -p 1</code>, just save the person being deleted).</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Cons</p></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>May have performance issues in terms of memory usage.</p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div><div class="ulist">
+<ul>
+<li>
+<p>We must ensure that the implementation of each individual command is correct.</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect5">
+<h6 id="reason-why-we-chose-alternative-1"><a class="link" href="#reason-why-we-chose-alternative-1">Reason why we chose alternative 1:</a></h6>
+<div class="paragraph">
+<p>Even though the memory usage of Alternative 2 is lesser, we do not feel that this benefit of lesser memory usage
+outweighs the tedious cost of implementing the alternative.</p>
+</div>
+<div class="paragraph">
+<p>Furthermore, as we realise that each time the application starts, the memories of the states
+are cleared.
+This means that the cost of having alternative 1 is significantly lesser, as the memories of the states do not
+accumulate. As such, we decided to go with the first alternative.</p>
+</div>
+<div class="paragraph">
+<p>{End of extract from Developer Guide}</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 15:23:00 UTC</div></div></div></body></html>

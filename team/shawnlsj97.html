@@ -1,0 +1,572 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]--><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Asciidoctor 1.5.6.1"><title>Shawn Lee Shi Jie - Project Portfolio for Athletick</title><link rel="stylesheet" href="../stylesheets/gh-pages.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../stylesheets/coderay-asciidoctor.css"></head><body class="article"><div id="site-header"><nav class="navbar navbar-light bg-light"><div class="container"><a class="navbar-brand" href="../index.html">Athletick</a><ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="../UserGuide.html">User Guide</a></li><li class="nav-item"><a class="nav-link" href="../DeveloperGuide.html">Developer Guide</a></li><li class="nav-item"><a class="nav-link active" href="../AboutUs.html">About Us</a></li><li class="nav-item"><a class="nav-link" href="../ContactUs.html">Contact Us</a></li><li class="navitem"><a class="nav-link" href="https://github.com/AY1920S1-CS2103T-T12-3/main"><span class="fa fa-github fa-lg" aria-hidden="true"></span>&nbsp;View on GitHub</a></li></ul></div></nav></div><div id="header"><h1>Shawn Lee Shi Jie - Project Portfolio for Athletick</h1></div><div id="content"><div class="sect1">
+<h2 id="introduction"><a class="link" href="#introduction">1. Introduction</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document details my contribution to the team project, <strong>Athletick</strong>.</p>
+</div>
+<div class="sect2">
+<h3 id="about-the-team"><a class="link" href="#about-the-team">1.1. About the team</a></h3>
+<div class="paragraph">
+<p><strong>Athletick</strong> was completed by 4 other students and myself. We are second-year computer science undergraduates from the National University of Singapore (NUS).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="about-the-project"><a class="link" href="#about-the-project">1.2. About the project</a></h3>
+<div class="paragraph">
+<p><strong>Athletick</strong> is a team management desktop application for coaches and team captains of
+timing-based performance sports. <strong>Athletick</strong> provides them with athlete
+information managing, attendance tracking and performance monitoring. This enables them to better manage their team, plan for trainings and prepare for upcoming competitions.</p>
+</div>
+<div class="paragraph">
+<p><strong>Athletick</strong> was developed as part of a requirement for our second-year software engineering
+module, <a href="https://nusmods.com/modules/CS2103T/software-engineering">CS2103T</a>. The project was
+completed over a period of  six weeks. We were tasked to morph an <a href="https://se-education.org/addressbook-level3/">address book application</a> that manages contacts into an application that
+manages something else. As part of the project constraints, the input to <strong>Athletick</strong> needs to be primarily Command-Line Interface (CLI), where the user interacts with <strong>Athletick</strong> by issuing lines of commands.</p>
+</div>
+<div class="paragraph">
+<p>Note the following symbols and formatting used in this document:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This symbol indicates important information
+</td>
+</tr>
+</table>
+</div>
+<div class="hdlist">
+<table>
+<tr>
+<td class="hdlist1">
+<code>command</code>
+</td>
+<td class="hdlist2">
+<p>A grey highlight (called a mark-up) indicates that this is a command that can be typed into the command
+line and executed by the application.</p>
+</td>
+</tr>
+<tr>
+<td class="hdlist1">
+<code><span class="green">component</span></code>
+</td>
+<td class="hdlist2">
+<p>Green text with grey highlight indicates a component, class, object or method in the architecture of the application.</p>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="summary-of-contributions"><a class="link" href="#summary-of-contributions">2. Summary of contributions</a></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section contains a summary of my coding, documentation, and other helpful contributions to the team project.</p>
+</div>
+<div class="paragraph">
+<p><strong>Enhancement Added</strong>: I added the ability to display training and performance records in a calendar.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>What it does</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>view calendar</code> and <code>calendar MMYYYY</code> commands allow users display a monthly calendar indicating which days contain training and performance records.</p>
+</li>
+<li>
+<p>The <code>calendar DDMMYYYY</code> command allows users to display training and performance records recorded on a specific date in the form of tables. The overall team attendance rate is displayed in the form of a pie chart as well.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Justification</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The ability to keep track of when training and performance records were recorded is important
+for coaches and captains as it allows them to find out what happened on a specific date.</p>
+</li>
+<li>
+<p>The use of a calendar to display this information is neat and easy to navigate, which makes the feature more user-friendly.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Highlights</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This enhancement provides a platform for further development of date-related features, such as
+the planning of training programmes in advance.</p>
+</li>
+<li>
+<p>The implementation was also challenging because it required the <code><span class="green">Training</span></code> and
+<code><span class="green">Performance</span></code> features to incorporate a date for the calendar to utilise and the construction of a calendar is complex.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Code contributed</strong>: [<a href="https://nus-cs2103-ay1920s1.github.io/tp-dashboard/#search=&amp;sort=groupTitle&amp;sortWithin=title&amp;since=2019-09-06&amp;timeframe=commit&amp;mergegroup=false&amp;groupSelect=groupByRepos&amp;breakdown=false&amp;tabOpen=true&amp;tabType=authorship&amp;tabAuthor=shawnlsj97&amp;tabRepo=AY1920S1-CS2103T-T12-3%2Fmain%5Bmaster%5D">RepoSense</a>] [<a href="https://github.com/AY1920S1-CS2103T-T12-3/main/commits?author=shawnlsj97">GitHub repository</a>]</p>
+</div>
+<div class="paragraph">
+<p><strong>Other contributions</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Project management</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Managed releases <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/releases/tag/v1.1">v1.1</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/releases/tag/v1.2">v1.2</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/releases/tag/v1.2.5">v1.2.5</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/releases/tag/v1.3.1">v1.3.1</a> and <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/releases/tag/v1.3.2">v1.3.2</a> (5 releases) on GitHub.</p>
+</li>
+<li>
+<p>Served as the team&#8217;s Integration Engineer, ensuring all features are integrated together smoothly
+for each project milestone submission.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Enhancements to existing features</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Implemented sorting of the team list. (Pull request <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/62">#62</a>)</p>
+</li>
+<li>
+<p>Updated the GUI layout and color scheme. (Pull request <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/68">#68</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/87">#87</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/201">#201</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Documentation</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added documentation for the <code>calendar</code>, <code>sort</code> and <code>view</code> commands in the User Guide. (Pull requests <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/124">#123</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/138">#138</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/214">#214</a>)</p>
+</li>
+<li>
+<p>Added documentation for the <code>calendar</code>, <code>sort</code> and <code>view</code> commands in the Developer Guide. (Pull requests <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/111">#111</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/220">#220</a>)</p>
+</li>
+<li>
+<p>Created style guide for diagrams for the team to adhere to. (<a href="https://docs.google.com/presentation/d/1JprrBR5HnnOQio1M9YEgheEYldplHqL18q4IQCGqyMk/edit#slide=id.p">Link</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Community:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Reviewed PRs by peers by providing feedback and suggestions. (Pull requests
+<a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/63">#63</a>,
+<a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/64">#64</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/65">#65</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/81">#81</a>, <a href="https://github.com/AY1920S1-CS2103T-T12-3/main/pull/91">#91</a>)</p>
+</li>
+<li>
+<p>Reported bugs and suggestions for other teams in the module.
+(<a href="https://github.com/shawnlsj97/ped/issues?q=is%3Aopen+is%3Aissue+label%3Atype.FunctionalityBug">Bug reports</a>, <a href="https://github.com/shawnlsj97/ped/issues?q=is%3Aopen+is%3Aissue+-label%3Atype.FunctionalityBug">Suggestions</a>)</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-user-guide"><a class="link" href="#contributions-to-the-user-guide">3. Contributions to the User Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>This section displays my contributions to the User Guide for the calendar feature. They showcase
+my ability to write documentation targeting end-users of our application. The full User Guide can
+be found <a href="https://ay1920s1-cs2103t-t12-3.github.io/main/UserGuide.html">here</a>.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue"><em>Start of extract from User Guide</em></span></p>
+</div>
+<div class="sect3">
+<h4 id="navigating-the-calendar-to-a-specific-month-code-calendar-mmyyyy-code"><a class="link" href="#navigating-the-calendar-to-a-specific-month-code-calendar-mmyyyy-code">3.1. Navigating the calendar to a specific month : <code>calendar MMYYYY</code></a></h4>
+<div class="paragraph">
+<p>This command allows you to display the calendar for a specific month of your choice.</p>
+</div>
+<div class="paragraph">
+<p>You will need to specify the month and the year you would like to view.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s say that you would like to view the calendar containing training and performance records from 2 years ago (e.g. October 2017).</p>
+</div>
+<div class="paragraph">
+<p><strong>What you should do</strong></p>
+</div>
+<div class="paragraph">
+<p>Type in the command <code>calendar</code> followed by the desired month and year in the format <code>MMYYYY</code>.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>calendar MMYYYY</code></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>MM</code> provided has to be within the range <code>01</code> to <code>12</code> (<code>0</code> must be included in front of single-digit numbers) and <code>YYYY</code> provided has to be within the range 0001 to 9999 for the command to execute successfully.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Example: <code>calendar 102017</code></p>
+</div>
+<div class="paragraph">
+<p>Type <code>calendar 102017</code> into the command box, and press <kbd>Enter</kbd> to execute it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/calendar5.png" alt="calendar5" width="450">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>What you should see</strong></p>
+</div>
+<div class="paragraph">
+<p>If successfully executed, the message "Viewing calendar for: October 2017" will be displayed in the result box (red box).</p>
+</div>
+<div class="paragraph">
+<p>Additionally, the feature box (yellow box) will display the calendar for the selected month and year (e.g. October 2017).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/calendar7.png" alt="calendar7" width="450">
+</div>
+</div>
+<div class="paragraph">
+<p>Days with training entries are marked with a green dot indicator, and days with performance entries are marked with a purple dot indicator. Days with both training and performance entries are marked with both indicators.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="viewing-training-performance-details-for-a-specific-date-code-calendar-ddmmyyyy-code"><a class="link" href="#viewing-training-performance-details-for-a-specific-date-code-calendar-ddmmyyyy-code">3.2. Viewing training / performance details for a specific date : <code>calendar DDMMYYYY</code></a></h4>
+<div class="paragraph">
+<p>This command displays the training and performance details entered on a specific date.</p>
+</div>
+<div class="paragraph">
+<p>You will need to specify the day, month and the year you would like to view.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s say that you have entered both training and performance records into <strong>Athletick</strong> on 31 October 2019, and you would like to view these records.</p>
+</div>
+<div class="paragraph">
+<p><strong>What you should do</strong></p>
+</div>
+<div class="paragraph">
+<p>Type in the command <code>calendar</code> followed by the desired date in the format <code>DDMMYYYY</code>.</p>
+</div>
+<div class="paragraph">
+<p>Format: <code>calendar DDMMYYYY</code></p>
+</div>
+<div class="paragraph">
+<p>Example: <code>calendar 31102019</code></p>
+</div>
+<div class="paragraph">
+<p>Type <code>calendar 31102019</code> into the command box, and press <kbd>Enter</kbd> to execute it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/calendar8.png" alt="calendar8" width="350">
+</div>
+</div>
+<div class="paragraph">
+<p><strong>What you should see</strong></p>
+</div>
+<div class="paragraph">
+<p>If successfully executed, the message "Viewing details for: 31st October 2019" will be displayed in the result box (red box).</p>
+</div>
+<div class="paragraph">
+<p>Additionally, the feature box (yellow box) will display the training and performance details recorded on 31 October 2019.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/calendar10.png" alt="calendar10" width="450">
+</div>
+</div>
+<div class="paragraph">
+<p>In the event your list of attendance and performance records exceeds the size of the window, you may use the blue vertical scrollbar on the right of the feature box to scroll down.</p>
+</div>
+<div class="paragraph">
+<p><span class="blue"><em>End of extract from User Guide</em></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="contributions-to-the-developer-guide"><a class="link" href="#contributions-to-the-developer-guide">4. Contributions to the Developer Guide</a></h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 100%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><em>This section displays my contributions to the Developer Guide for the calendar feature. They
+showcase my ability to write technical documentation and the technical depth of my contributions
+to the project. The full Developer Guide can be found
+<a href="https://ay1920s1-cs2103t-t12-3.github.io/main/DeveloperGuide.html">here</a>.</em></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><span class="blue"><em>Start of extract from Developer Guide</em></span></p>
+</div>
+<div class="sect2">
+<h3 id="calendar-feature"><a class="link" href="#calendar-feature">4.1. Calendar feature</a></h3>
+<div class="paragraph">
+<p>To allow users to retrieve training and performance records using the date they were recorded on, Athletick has a calendar feature which provides 2 main functions:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Displays an overview of training and performance records in a selected month</p>
+</li>
+<li>
+<p>Displays training and performance records entered on a specific date</p>
+</li>
+</ol>
+</div>
+<div class="sect3">
+<h4 id="implementation"><a class="link" href="#implementation">4.1.1. Implementation</a></h4>
+<div class="paragraph">
+<p>The implementation of the above functions will be described separately in this section.</p>
+</div>
+<div class="sect4">
+<h5 id="function-1-displays-an-overview-of-training-and-performance-records-in-a-selected-month"><a class="link" href="#function-1-displays-an-overview-of-training-and-performance-records-in-a-selected-month">Function 1: Displays an overview of training and performance records in a selected month</a></h5>
+<div class="paragraph">
+<p>There are 2 commands that users can issue to perform function 1:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>view calendar</code>: Displays calendar for the current month.</p>
+</li>
+<li>
+<p><code>calendar MMYYYY</code>: Displays calendar for the month specified by the user.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The following activity diagram summarises what happens when a user wants to perform function 1.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Function1ActivityDiagram.png" alt="Function1ActivityDiagram" width="500">
+</div>
+<div class="title">Figure 1. Activity diagram showing what happens when a user wants to  perform function 1</div>
+</div>
+<div class="paragraph">
+<p>Function 1 is facilitated by the <code><span class="green">CalendarPanel</span></code> class. It extends <code><span class="green">UiPart&lt;Region&gt;</span></code> and represents the calendar using a <code><span class="green">GridPane</span></code> with dimensions of 7 by 6 (42 cells). Additionally, it implements the following operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><span class="green">CalendarPanel#retrieveCurrentDate()</span></code>&#8201;&#8212;&#8201;Retrieves the details of today&#8217;s date to be used as the title of the calendar feature and for rendering the displayed month on the calendar when the user does not provide a specific month to view.</p>
+</li>
+<li>
+<p><code><span class="green">CalendarPanel#retrieveProvidedDate(AthletickDate)</span></code>&#8201;&#8212;&#8201;Retrieves the details of the date provided by the user for rendering the displayed month on the calendar.</p>
+</li>
+<li>
+<p><code><span class="green">CalendarPanel#initialiseSelectedDate()</span></code>&#8201;&#8212;&#8201;Fills up all the 42 cells of the <code><span class="green">GridPane</span></code> with their respective days based on the selected month by the user. Days of the previous and next month used to fill up the remaining cells are marked in a lighter colour.</p>
+<div class="paragraph">
+<p>In addition, days with training or performance records will be marked with a small green or purple dot indicator respectively.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These operations are performed when an instance of the <code><span class="green">CalendarPanel</span></code> class is created in the <code><span class="green">MainWindow</span></code> class. An instance of <code><span class="green">CalendarPanel</span></code> is created when the <code><span class="green">CommandResult</span></code> obtained in <code><span class="green">MainWindow</span></code> after the execution of the user&#8217;s command contains a <code><span class="green">Feature</span></code> corresponding to a calendar and an <em>optional</em> <code><span class="green">AthletickDate</span></code>.</p>
+</div>
+<div class="paragraph">
+<p>The sequence diagram below shows you what happens when the <code><span class="green">CalendarPanel</span></code> class is instantiated.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/CalendarConstructorSequenceDiagram.png" alt="CalendarConstructorSequenceDiagram" width="650">
+</div>
+<div class="title">Figure 2. Interactions inside the <code><span class="green">UI</span></code> and <code><span class="green">Model</span></code> components when <code><span class="green">CalendarPanel</span></code> is instantiated</div>
+</div>
+<div class="paragraph">
+<p>With reference to the above diagram, if <code><span class="green">hasTrainingOn(AthletickDate)</span></code> returns true, a green dot indicator will be added to the cell of the <code><span class="green">GridPane</span></code>. Similarly, if <code><span class="green">hasPerformanceOn(AthletickDate)</span></code> returns true, a purple dot indicator will be added.</p>
+</div>
+<div class="paragraph">
+<p>Upon completion of the above execution, all 42 cells <code><span class="green">GridPane</span></code> will be filled with a number corresponding to the day of the month. Days with training or performance records will be marked with a green or purple dot indicator respectively. The following diagram depicts how each individual cell will look like.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/CellResult.png" alt="CellResult" width="300">
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="function-2-displays-training-and-performance-records-entered-on-a-specific-date"><a class="link" href="#function-2-displays-training-and-performance-records-entered-on-a-specific-date">Function 2: Displays training and performance records entered on a specific date</a></h5>
+<div class="paragraph">
+<p>In order to perform function 2, the user issues the <code>calendar DDMMYYYY</code> command (e.g. <code>calendar 01012019</code> where <code>01012019</code> corresponds to 1st January 2019).</p>
+</div>
+<div class="paragraph">
+<p>The following activity diagram summarises what happens when a user issues the <code>calendar DDMMYYYY</code> command.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/Function2ActivityDiagram.png" alt="Function2ActivityDiagram" width="700">
+</div>
+<div class="title">Figure 3. Activity diagram showing what happens when a user issues the <code>calendar DDMMYYYY</code> command</div>
+</div>
+<div class="paragraph">
+<p>Function 2 is facilitated by <code><span class="green">CalendarDetailPanel</span></code>. It extends <code><span class="green">UiPart&lt;Region&gt;</span></code> and displays the attendance and performance records for a date specified by the user. Additionally, it implements the following operations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><span class="green">CalendarDetailPanel#initialiseAttendanceData()</span></code>&#8201;&#8212;&#8201;Retrieves and displays attendance
+records recorded on the specified date.</p>
+</li>
+<li>
+<p><code><span class="green">CalendarDetailPanel#initialisePerformanceData()</span></code>&#8201;&#8212;&#8201;Retrieves and displays the
+performance records recorded on the specified date.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These operations are performed when an instance of <code><span class="green">CalendarDetailPanel</span></code> is created in the <code><span class="green">MainWindow</span></code> class. An instance of <code>CalendarDetailPanel</code> is created when the <code><span class="green">CommandResult</span></code> obtained after executing the user&#8217;s command contains a <code><span class="green">Feature</span></code> corresponding to a calendar and an <code><span class="green">AthletickDate</span></code>.</p>
+</div>
+<div class="paragraph">
+<p>The sequence diagram below shows you what happens when the <code><span class="green">CalendarDetailPanel</span></code> class is instantiated.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../images/CalendarDetailConstructor.png" alt="CalendarDetailConstructor" width="650">
+</div>
+<div class="title">Figure 4. Interactions inside the <code><span class="green">UI</span></code> and <code><span class="green">Model</span></code> components when <code><span class="green">CalendarPanel</span></code> is instantiated</div>
+</div>
+<div class="paragraph">
+<p>Upon completion of the above execution, training and performance records recorded on the specified date will be displayed to the user.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="design-considerations"><a class="link" href="#design-considerations">4.1.2. Design considerations</a></h4>
+<div class="paragraph">
+<p>This section contains some of our design considerations for the calendar feature.</p>
+</div>
+<div class="sect4">
+<h5 id="aspect-whether-to-display-information-using-a-monthly-calendar-or-a-list-only-containing-dates-in-a-month-with-training-or-performance-records"><a class="link" href="#aspect-whether-to-display-information-using-a-monthly-calendar-or-a-list-only-containing-dates-in-a-month-with-training-or-performance-records">Aspect: Whether to display information using a monthly calendar or a list only containing dates in a month with training or performance records</a></h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 45.4545%;">
+<col style="width: 45.4546%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Alternative 1 (Current Choice)</strong>: Use a monthly calendar</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Alternative 2</strong>: Use a monthly list</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Pros</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays information more clearly especially when users have a large number of training and performance records in a month</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays information more concisely if users have a small amount of training and performance records in a month</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cons</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Increases difficulty of implementation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays information in rows and columns which is no better than using Excel</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Reasons for choice of alternative 1:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 displays information more clearly when users have a large amount of training and performance information, which is a probable scenario in the case of sports teams. In contrast, alternative 2 uses a list similar to Excel which we are trying to improve upon.</p>
+</li>
+<li>
+<p>Alternative 1 abides by our design principle to keep <strong>Athletick</strong> designer friendly since future developers can expand upon it and implement more date-related functionalities.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect4">
+<h5 id="aspect-how-to-display-calendar-for-a-month"><a class="link" href="#aspect-how-to-display-calendar-for-a-month">Aspect: How to display calendar for a month</a></h5>
+<table class="tableblock frame-all grid-all spread">
+<colgroup>
+<col style="width: 9.0909%;">
+<col style="width: 45.4545%;">
+<col style="width: 45.4546%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Alternative 1 (Current Choice)</strong>: Display using a fixed 7 by 6 <code><span class="green">GridPane</span></code>, fill up left over days with days from previous and next month</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Alternative 2</strong>: Display using a variable sized <code><span class="green">GridPane</span></code> that is populated with days from selected month only</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Pros</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Emulates implementation by other calendar applications and easier to implement (e.g. Google
+Calendar)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximises usage of space in the application window</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Cons</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Displays information of previous and next month which users may not be interested in</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Increases difficulty of implementation</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><strong>Reasons for choice of alternative 1:</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Alternative 1 is easier to implement since the dimensions of the calendar are fixed so we do not have to recalculate it constantly. The ease of implementation is important given the tight deadlines we have to contend with in our software engineering module.</p>
+</li>
+<li>
+<p>Alternative 1 emulates the implementation of other successful calendar applications (e.g. Google Calendar) so we do not have to reinvent the wheel.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="blue"><em>End of extract from Developer Guide</em></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div id="footer"><div class="container"><div id="footer-text">Last updated 2019-11-11 15:23:00 UTC</div></div></div></body></html>
